@@ -2,10 +2,16 @@ package Task2.fish;
 
 import Task2.LifeDuration;
 import Task2.Size;
+import Task2.SwimSpeed;
 
-public class Shark extends Fish implements Size, LifeDuration {
+public class Shark extends Fish implements Size, LifeDuration, SwimSpeed {
     public Shark(String name) {
         super(name);
+    }
+
+    @Override
+    public int getSwimSpeed() {
+        return 8;
     }
 
     @Override

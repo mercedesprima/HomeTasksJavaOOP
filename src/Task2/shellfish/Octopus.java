@@ -2,10 +2,16 @@ package Task2.shellfish;
 
 import Task2.LifeDuration;
 import Task2.Size;
+import Task2.SwimSpeed;
 
-public class Octopus extends Sellfish implements Size, LifeDuration {
+public class Octopus extends Sellfish implements Size, LifeDuration, SwimSpeed {
     public Octopus(String name) {
         super(name);
+    }
+
+    @Override
+    public int getSwimSpeed() {
+        return 15;
     }
 
     @Override

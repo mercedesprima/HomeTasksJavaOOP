@@ -2,10 +2,16 @@ package Task2.reptiles;
 
 import Task2.LifeDuration;
 import Task2.Size;
+import Task2.SwimSpeed;
 
-public class Turtle extends Reptiles implements Size, LifeDuration {
+public class Turtle extends Reptiles implements Size, LifeDuration, SwimSpeed {
     public Turtle(String name) {
         super(name);
+    }
+
+    @Override
+    public int getSwimSpeed() {
+        return 36;
     }
 
     @Override

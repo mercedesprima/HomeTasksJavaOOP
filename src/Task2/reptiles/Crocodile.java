@@ -2,10 +2,16 @@ package Task2.reptiles;
 
 import Task2.LifeDuration;
 import Task2.Size;
+import Task2.SwimSpeed;
 
-public class Crocodile extends Reptiles implements Size, LifeDuration{
+public class Crocodile extends Reptiles implements Size, LifeDuration, SwimSpeed {
     public Crocodile(String name) {
         super(name);
+    }
+
+    @Override
+    public int getSwimSpeed() {
+        return 30;
     }
 
     @Override

@@ -73,6 +73,7 @@ public class Aquarium {
         }
         return predators;
     }
+
     public List getHerbivores() {
         List herbivores = new ArrayList<>();
         for (Animal animal : aquarium) {
@@ -81,5 +82,26 @@ public class Aquarium {
             }
         }
         return herbivores;
+    }
+
+    public List<SwimSpeed> swimmers() {
+        List<SwimSpeed> lifetimes = new ArrayList<>();
+        for (Animal animal : aquarium) {
+            if (animal instanceof SwimSpeed) {
+                swimmers().add((SwimSpeed) animal);
+            }
+        }
+        return lifetimes;
+    }
+
+    public SwimSpeed getSwimSpeed() {
+        List<SwimSpeed> swimmers = swimmers();
+        SwimSpeed swimChamp = swimmers.get(0);
+        for (SwimSpeed swimmer : swimmers()) {
+            if (swimChamp.getSwimSpeed() < swimmer.getSwimSpeed()) {
+                swimChamp = swimmer;
+            }
+        }
+        return swimChamp;
     }
 }

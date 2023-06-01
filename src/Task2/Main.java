@@ -43,5 +43,10 @@ public class Main {
         LifeDuration champion = aquarium.getLongLived();
         System.out.println("-----Долгожитель-----");
         System.out.println(champion);
+
+        System.out.println();
+        Size swimChamp = aquarium.getBiggest();
+        System.out.println("-----Самый быстроходный-----");
+        System.out.println(swimChamp);
     }
 }
